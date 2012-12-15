@@ -1,5 +1,8 @@
 language: ruby
 
 rvm:
-  - "1.9.3o
+  - "1.9.3"
   - jruby-19mode
+
+before_script:
+  - cp config/database.travis.yml config/database.yml
