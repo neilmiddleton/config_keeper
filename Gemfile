@@ -16,8 +16,10 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'rb-fsevent', '~> 0.9.1'
-  gem 'terminal-notifier-guard'
+  if RUBY_PLATFORM =~ /darwin/
+    gem 'guard'
+    gem 'guard-rspec'
+    gem 'rb-fsevent', '~> 0.9.1'
+    gem 'terminal-notifier-guard'
+  end
 end
