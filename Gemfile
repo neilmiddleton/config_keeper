@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 gem 'sqlite3'
 gem 'acts-as-taggable-on'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -18,4 +19,5 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rb-fsevent', '~> 0.9.1'
+  gem 'terminal-notifier-guard'
 end
