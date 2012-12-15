@@ -1,6 +1,11 @@
-class Heroku::App < ActiveRecord::Base
+class Heroku::App
 
-  validates :name, presence: true, uniqueness: true
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
+
+  attr_accessor :name
+  validates :name, presence: true
 
   def get_key(name)
     # TODO: Add method to get a key from a heroku app
