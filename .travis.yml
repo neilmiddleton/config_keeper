@@ -4,5 +4,6 @@ rvm:
   - "1.9.3"
 
 before_script:
+  - psql -c 'CREATE DATABASE config_keeper_test;' -U postgres
   - cp config/database.travis.yml config/database.yml
-  - rake db:migrate
+  - bundle exec rake db:migrate db:seed
