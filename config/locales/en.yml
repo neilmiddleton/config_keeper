@@ -2,6 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  configkeeper: Config Keeper
+  keys: Keys
+  apps: Applications
+  profile: Your Profile
+  save_changes: Save changes
+  cancel: Cancel
+  edit: Edit %{thing}
+
+  leave_blank: (leave blank if you don't want to change it)
+  need_current_password: (we need your current password to confirm your changes)
   api_token_required: "Before continuing we require your Heroku API token"
 
   activerecord:

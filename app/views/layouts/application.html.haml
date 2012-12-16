@@ -6,10 +6,28 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    .container
-      .row
+    .container-fluid
+      .navbar.navbar-inverse.static-top
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar{:"data-toggle" => "collapse", :"data-target" => ".nav-collapse"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+            = link_to t(:configkeeper), "/", class: 'brand'
+
+            .nav-collapse.collapse
+              %ul.nav
+                %li= link_to t(:keys)
+                %li= link_to t(:apps)
+                %li= link_to t(:profile), edit_user_registration_path(current_user)
+
+      .row-fluid
         - [:notice, :alert].each do |alert|
           - unless flash[alert].blank?
             %p{class: alert}= flash[alert]
-      .row
-        = yield
+
+      .row-fluid
+        .span12
+          = yield
