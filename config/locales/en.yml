@@ -2,4 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  api_token_required: "Before continuing we require your Heroku API token"
+
+  activerecord:
+    attributes:
+      user:
+        email: Email Address
+        password: Password
+        api_token: Heroku API Token

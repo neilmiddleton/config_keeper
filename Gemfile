@@ -4,6 +4,8 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'devise'
+gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
+gem 'haml'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -22,4 +24,8 @@ group :development, :test do
     gem 'rb-fsevent', '~> 0.9.1'
     gem 'terminal-notifier-guard'
   end
+end
+
+group :development do
+  gem 'foreman'
 end
