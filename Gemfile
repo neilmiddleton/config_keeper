@@ -6,6 +6,7 @@ gem 'acts-as-taggable-on'
 gem 'devise'
 gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 gem 'haml'
+gem 'heroku-api', :require => 'heroku-api'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

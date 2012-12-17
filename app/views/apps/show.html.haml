@@ -1,0 +1,18 @@
+= link_to t(:back_link, default: "<< Back"), apps_path
+%h2= @app.name
+
+%h4= t :config, default: "Configuration"
+
+- if @config.size > 0
+  %table.table
+    %thead
+      %tr
+        %th= t :name, default: "Name"
+        %th= t :value, default: "Value"
+    - @config.each do |key|
+      %tr
+        %td=key.name
+        %td
+          %pre=key.value
+- else
+  %p= t(:no_keys_found, default: "No keys found")

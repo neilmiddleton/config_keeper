@@ -1,0 +1,11 @@
+%h2 Your applications
+
+%table.table
+  %thead
+    %th= t(:name, default: "Name")
+    %th= t(:owner, default: "Owner")
+  - @apps.each do |app|
+    %tr
+      %td= link_to app.name, app
+      %td= app.owner
+
