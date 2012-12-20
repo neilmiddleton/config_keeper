@@ -14,5 +14,9 @@
         %td=key.name
         %td
           %pre=key.value
+
+  = button_to t(:import_keys, default: "Import keys"),
+    sync_to_repo_app_path(@app), class: 'btn btn-success'
+
 - else
   %p= t(:no_keys_found, default: "No keys found")

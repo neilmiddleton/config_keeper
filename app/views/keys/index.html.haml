@@ -1,0 +1,16 @@
+%h2 Your keys
+
+%table.table
+  %thead
+    %th= t(:name, default: "Name")
+    %th= t(:value, default: "Value")
+    %th= t(:apps, default: "Apps")
+  - @keys.each do |key|
+    %tr
+      %td
+        %pre= key.name
+      %td
+        %pre= key.value
+      %td
+        - key.apps.each do |app|
+          %span.label= app.name

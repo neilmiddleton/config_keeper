@@ -17,4 +17,5 @@ class App
   def owner
     owner_name || owner_email
   end
+
 end
